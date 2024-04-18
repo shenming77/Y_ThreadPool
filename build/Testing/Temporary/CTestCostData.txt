@@ -1,4 +1,0 @@
-thread_pool_test 1 0.0861552
-ValgrindTest1 1 7.72694
-ValgrindTest2 1 2.24983
----

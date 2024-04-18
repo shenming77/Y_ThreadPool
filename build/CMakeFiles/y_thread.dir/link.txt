@@ -1,1 +1,0 @@
-/usr/bin/c++  -O0 -ggdb  -rdynamic CMakeFiles/y_thread.dir/app/main.cpp.o  -o y_thread  libutils.a -lpthread 
