@@ -1,0 +1,2 @@
+/usr/bin/ar qc libutils.a  CMakeFiles/utils.dir/src/YThreadPool/ThreadPool.cpp.o
+/usr/bin/ranlib libutils.a

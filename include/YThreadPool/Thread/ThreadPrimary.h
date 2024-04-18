@@ -13,7 +13,7 @@ namespace YThreadPool{
 
 class ThreadPrimary : public ThreadBase {
 protected:
-    explicit ThreadPrimary(bool lockfree_open = true) {
+    explicit ThreadPrimary(bool lockfree_open = false) {
         index_ = SECONDARY_THREAD_COMMON_ID;
         pool_threads_ = nullptr;
         type_ = THREAD_TYPE_PRIMARY;
