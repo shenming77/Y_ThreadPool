@@ -2,7 +2,7 @@ message("* * * * * * * * * *  Y_ThreadPool * * * * * * * * * * * * * * *")
 
 cmake_minimum_required(VERSION 3.1.0)
 
-project(CGraph LANGUAGES CXX)
+project(Y_ThreadPool LANGUAGES CXX)
 
 # 默认使用C++14版本，推荐使用C++17版本。不支持C++11以下版本
 set(CMAKE_CXX_STANDARD 17)
