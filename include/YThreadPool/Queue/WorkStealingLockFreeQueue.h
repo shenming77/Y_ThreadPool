@@ -228,6 +228,10 @@ public:
         return result;
     }
 
+    //std::memory_order_relaxed最宽松的内存顺序约束规则,同一个线程具有happens-before关系
+    //memory_order_acquire获取,保证在它之后的访问永远在它之后
+    //memory_order_release释放,保证它之前的操作永远在它之前
+    
     //compare_exchange_strong 试图将原子对象的值与提供的预期值 (expected value) 比较，如果它们相等，
     //则将该原子对象设置为新的值 (desired value)。如果比较成功，操作返回 true；
     //如果失败，原子对象的当前值会被存储到预期值变量中，并返回 false。
