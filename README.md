@@ -29,33 +29,45 @@
 
 ```
 .
-├── code           源代码
-│   ├── buffer
-│   ├── config
-│   ├── http
-│   ├── log
-│   ├── timer
-│   ├── pool
-│   ├── server
+├── app                                          线程池使用案例
 │   └── main.cpp
-├── test           单元测试
-│   ├── Makefile
-│   └── test.cpp
-├── resources      静态资源
-│   ├── index.html
-│   ├── image
-│   ├── video
-│   ├── js
-│   └── css
-├── bin            可执行文件
-│   └── server
-├── log            日志文件
-├── webbench-1.5   压力测试
-├── build          
-│   └── Makefile
-├── Makefile
-├── LICENSE
-└── readme.md
+├── build
+├── CMakeLists.txt
+├── include
+│   ├── ThreadPool                               对比源代码
+│   │   └── threadpool.h
+│   └── YThreadPool                              My源代码
+│       ├── Metrics.h
+│       ├── Queue                                队列
+│       │   ├── AtomicPriorityQueue.h            
+│       │   ├── AtomicQueue.h
+│       │   ├── AtomicRingBufferQueue.h
+│       │   ├── LockFreeRingBufferQueue.h
+│       │   ├── QueueDefine.h
+│       │   ├── QueueObject.h
+│       │   ├── WorkStealing.h
+│       │   ├── WorkStealingLockFreeQueue.h
+│       │   └── WorkStealingQueue.h
+│       ├── Task                                任务封装
+│       │   ├── TaskGroup.h
+│       │   └── Task.h
+│       ├── Thread                              工作线程
+│       │   ├── ThreadBase.h
+│       │   ├── ThreadPrimary.h
+│       │   └── ThreadSecondary.h
+│       ├── ThreadPoolConfig.h                
+│       ├── ThreadPoolDefine.h
+│       ├── ThreadPool.h                        线程池
+│       └── ThreadPool.inl
+├── picture
+├── README.md
+├── src
+│   └── YThreadPool                             线程池
+│       └── ThreadPool.cpp              
+└── test                                        测试
+    ├── threadpool_gtest.cpp
+    └── threadpool_test.cpp
+
 ```
 
 
