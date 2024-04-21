@@ -15,10 +15,11 @@ template<typename T>
 class WorkStealingQueue : public WorkStealing<T>{
 public:
 
-    WorkStealingQueue() = default;
+    explicit WorkStealingQueue() = default;
     WorkStealingQueue(const WorkStealingQueue&) = delete;
     const WorkStealingQueue& operator=(const WorkStealingQueue&) = delete;
-    
+    ~WorkStealingQueue() = default;
+
     /**
      * 向队列中写入信息
      * @param value

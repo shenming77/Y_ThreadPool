@@ -243,7 +243,7 @@ public:
 
     WorkStealingLockFreeQueue(const WorkStealingLockFreeQueue&) = delete;
     const WorkStealingLockFreeQueue& operator=(const WorkStealingLockFreeQueue&) = delete;
-
+    ~WorkStealingLockFreeQueue() = default;
     
 private:
     std::atomic<int> head_;                                // 开始元素（较早写入的）的位置
