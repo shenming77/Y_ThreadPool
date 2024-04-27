@@ -11,7 +11,7 @@
 * 尽可能减少调度过程中各种细节损耗（比如，new、copy构造等）；
 * local-thread机制：n个线程的私有的n个WorkStealing类的对象，线程执行任务时避免了从pool中获取去**争抢**任务了；
 * work-stealing机制：WorkStealing类实现了**任务窃取机制**，当thread本地没有task的时候，从附近的thread去窃取任务；
-* lock-free机制：基于atomic的、基于内部封装mutex的**无锁机制**，如基于atomic的WorkStealingLockFreeQueue类；
+* lock-free机制：基于atomic的、基于内部封装mutex的**无锁机制**的队列，如基于atomic的WorkStealingLockFreeQueue类；
 * 还具有自动扩缩容机制，批量处理机制，以及简单的负载均衡机制； 
 
 ## 环境要求
